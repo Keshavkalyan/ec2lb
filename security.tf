@@ -1,5 +1,5 @@
-resource "aws_security_group" "helloworld" {
-  name        = "helloworld"
+resource "aws_security_group" "helloworld12" {
+  name        = "helloworld12"
   description = "Allow HTTP, HTTPS, and SSH"
   vpc_id      = data.aws_vpc.default.id  # Reference to default VPC
 
@@ -36,6 +36,6 @@ resource "aws_security_group" "helloworld" {
   }
 
   tags = {
-    Name = "helloworld"
+    Name = "helloworld12"
   }
 }
