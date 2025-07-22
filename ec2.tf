@@ -1,6 +1,6 @@
 resource "aws_instance" "web" {
   count         = 2
-  ami           = "ami-0b32d400456908bf9"  # Amazon Linux 2 (eu-north-1)
+  ami           = "ami-0437df53acb2bbbfd"  # Amazon Linux 2 (eu-north-1)
   instance_type = "t2.micro"
   subnet_id     = data.aws_subnets.default.ids[count.index]
   vpc_security_group_ids = [aws_security_group.web_sg.id]
