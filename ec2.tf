@@ -3,7 +3,7 @@ resource "aws_instance" "web" {
   ami           = "ami-0437df53acb2bbbfd"  # Amazon Linux 2 (eu-north-1)
   instance_type = "t2.micro"
   subnet_id     = data.aws_subnets.default.ids[count.index]
-  vpc_security_group_ids = [aws_security_group.web_sg.id]
+  vpc_security_group_ids = [aws_security_group.helloworld.id]
   key_name      = "demokeypair"  # Optional, use if you created this key pair
   user_data     = <<-EOF
                 #!/bin/bash
