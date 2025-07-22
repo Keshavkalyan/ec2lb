@@ -1,4 +1,4 @@
-resource "aws_security_group" "web_sg" {
+resource "aws_security_group" "web_sg12" {
   name        = "web-sg"
   description = "Allow HTTP inbound traffic"
   vpc_id      = data.aws_vpc.default.id
