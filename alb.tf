@@ -2,7 +2,7 @@ resource "aws_lb" "web_alb" {
   name               = "web-alb"
   internal           = false
   load_balancer_type = "application"
-  security_groups    = [aws_security_group.web_sg.id]
+  security_groups    = [aws_security_group.helloworld.id]
   subnets            = data.aws_subnets.default.ids
 }
 
